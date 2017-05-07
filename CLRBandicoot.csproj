@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{F4BC8864-8AB6-45E6-9B8B-34E166EC9443}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Compile Include="BIOS.cs" />
+    <Compile Include="BitConv.cs" />
+    <Compile Include="EmuDirectMethodAttribute.cs" />
+    <Compile Include="Cutter.cs" />
+    <Compile Include="EmuDelegate.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="MIPS\Compiler.cs" />
+    <Compile Include="MIPS\COPFunction.cs" />
+    <Compile Include="MIPS\Instructions\Miscellaneous\NativeCodeInstruction.cs" />
+    <Compile Include="PCSX.cs" />
+    <Compile Include="Profiler.cs" />
+    <Compile Include="PSX.cs" />
+    <Compile Include="MIPS\Function.cs" />
+    <Compile Include="MIPS\Instructions\Addition\ADDIInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Addition\ADDInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Addition\ADDIUInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Addition\ADDUInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Addition\SUBInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Addition\SUBUInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Branch\BEQInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Branch\BGEZALInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Branch\BGEZInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Branch\BGTZInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Branch\BLEZInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Branch\BLTZALInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Branch\BLTZInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Branch\BNEInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Comparison\SLTIInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Comparison\SLTInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Comparison\SLTIUInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Comparison\SLTUInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Coprocessor\CFCInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Coprocessor\COPInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Coprocessor\CTCInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Coprocessor\LWCInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Coprocessor\MFCInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Coprocessor\MTCInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Coprocessor\SWCInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Instruction.cs" />
+    <Compile Include="MIPS\Instructions\Jump\JALInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Jump\JALRInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Jump\JInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Jump\JRInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Logical\ANDIInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Logical\ANDInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Logical\NORInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Logical\ORIInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Logical\ORInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Logical\XORIInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Logical\XORInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Memory\LBInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Memory\LBUInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Memory\LHInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Memory\LHUInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Memory\LWInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Memory\SBInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Memory\SHInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Memory\SWInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Memory\Unaligned\LWLInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Memory\Unaligned\LWRInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Memory\Unaligned\SWLInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Memory\Unaligned\SWRInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Miscellaneous\BREAKInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Miscellaneous\InvalidInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Miscellaneous\LUIInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Miscellaneous\NOPInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Miscellaneous\SYSCALLInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Multiplication\DIVInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Multiplication\DIVUInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Multiplication\MFHIInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Multiplication\MFLOInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Multiplication\MTHIInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Multiplication\MTLOInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Multiplication\MULTInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Multiplication\MULTUInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Shift\SLLInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Shift\SLLVInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Shift\SRAInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Shift\SRAVInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Shift\SRLInstruction.cs" />
+    <Compile Include="MIPS\Instructions\Shift\SRLVInstruction.cs" />
+    <Compile Include="MIPS\Opcode.cs" />
+    <Compile Include="MIPS\REGIMM.cs" />
+    <Compile Include="MIPS\Register.cs" />
+    <Compile Include="PSXException.cs" />
+    <Compile Include="UI\DebugForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DebugForm.Designer.cs">
+      <DependentUpon>DebugForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Word.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\DebugForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DebugForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
